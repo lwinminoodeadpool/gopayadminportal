@@ -9,6 +9,8 @@ import AccessoriesPage from './pages/Accessories';
 import PlateNumbersPage from './pages/PlateNumbers';
 import TransactionsPage from './pages/Transactions';
 import ReportsPage from './pages/Reports';
+import ContentPage from './pages/ContentManagement';
+import OrdersPage from './pages/Orders';
 
 function App() {
   return (
@@ -29,7 +31,7 @@ function App() {
         <Route path="/parking" element={<MainLayout title="Parking Areas" />}>
           <Route index element={<ParkingPage />} />
         </Route>
-        <Route path="/accessories" element={<MainLayout title="Accessories" />}>
+        <Route path="/accessories" element={<MainLayout title="Product Management" />}>
           <Route index element={<AccessoriesPage />} />
         </Route>
         <Route path="/transactions" element={<MainLayout title="Transactions" />}>
@@ -37,6 +39,12 @@ function App() {
         </Route>
         <Route path="/reports" element={<MainLayout title="Reports & Analytics" />}>
           <Route index element={<ReportsPage />} />
+        </Route>
+        <Route path="/content" element={<MainLayout title="Content Management" />}>
+          <Route index element={<ContentPage />} />
+        </Route>
+        <Route path="/orders" element={<MainLayout title="Order Management" />}>
+          <Route index element={<OrdersPage />} />
         </Route>
       </Routes>
     </Router>
