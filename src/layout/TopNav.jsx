@@ -1,7 +1,15 @@
 import React from 'react';
-import { Bell, Search, User } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Bell, Search, User, LogOut } from 'lucide-react';
 
 const TopNav = ({ title }) => {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem('access-token');
+        navigate('/login');
+    };
+
     return (
         <div className="top-nav">
             <div className="nav-left">
@@ -20,6 +28,9 @@ const TopNav = ({ title }) => {
                         <p className="user-name">Admin User</p>
                     </div>
                 </div>
+                <button onClick={handleLogout} className="icon-btn logout-btn" title="Logout">
+                    <LogOut size={20} />
+                </button>
             </div>
         </div>
     );
