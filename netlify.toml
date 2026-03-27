@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/baas/*"
+  to = "https://uat-miniapp.kbzpay.com/baas/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/service/*"
+  to = "https://uat-miniapp.kbzpay.com/service/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

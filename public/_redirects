@@ -1,1 +1,3 @@
+/baas/*    https://uat-miniapp.kbzpay.com/baas/:splat    200
+/service/*    https://uat-miniapp.kbzpay.com/service/:splat    200
 /*    /index.html   200
