@@ -6,13 +6,13 @@
 
 [[redirects]]
   from = "/baas/*"
-  to = "https://uat-miniapp.kbzpay.com/baas/:splat"
+  to = "/.netlify/functions/proxy/baas/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "/service/*"
-  to = "https://uat-miniapp.kbzpay.com/service/:splat"
+  to = "/.netlify/functions/proxy/service/:splat"
   status = 200
   force = true
 
